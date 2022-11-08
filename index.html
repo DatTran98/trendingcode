@@ -14,13 +14,28 @@
 <body>
     <div class="box">
         <canvas id="pinkboard"></canvas>
+        <div class="container">
+            <!--Area of the images-->
+            <div class="wrapper">
+                <img src="img/img1.jpg">
+                <img src="img/img2.jpg">
+                <img src="img/img3.jpg">
+                <img src="img/img4.jpg">
+                <img src="img/img5.jpg">
+                <img src="img/img6.jpg">
+                <img src="img/img7.jpg">
+            </div>
+    
+        </div>
+        <canvas id="canvas"></canvas>
+       
     </div>
     <script src="script.js"> </script>
-
+    <script src="neonscript.js"> </script>
 
     </script>
 
-    <a class="center-text" id="itemClick" onclick="playAudio()" style="background-color:rgb(0, 0, 0);
+    <a class="center-text" id="itemClick" style="background-color:transparent;
         width: 100%;
         color: #FF5CA4;
         height:100%;
@@ -30,22 +45,11 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 5px;
-        text-align: center;">Mai Huyền</a>
+        text-align: center;
+        z-index: 1000;">Mai Huyền</a>
 
 
-    <div class="container">
-        <!--Area of the images-->
-        <div class="wrapper">
-            <img src="img/img1.jpg">
-            <img src="img/img2.jpg">
-            <img src="img/img3.jpg">
-            <img src="img/img4.jpg">
-            <img src="img/img5.jpg">
-            <img src="img/img6.jpg">
-            <img src="img/img7.jpg">
-        </div>
-
-    </div>
+    
 </body>
 
 </html>

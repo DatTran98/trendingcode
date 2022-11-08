@@ -12,19 +12,25 @@ body {
 
 .box {
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    z-index: 1000;
 }
 
 canvas {
     position: absolute;
     width: 100%;
     height: 100%;
+    
+}
+
+#canvas{
+    background-color: transparent;
+   z-index: -1;
 }
 
 #pinkboard {
@@ -33,6 +39,7 @@ canvas {
     height: 500px;
     width: 500px;
     animation: animate 1.3s infinite;
+    z-index: 999;
 }
 
 #pinkboard:before,
