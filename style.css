@@ -25,12 +25,12 @@ canvas {
     position: absolute;
     width: 100%;
     height: 100%;
-    
+
 }
 
-#canvas{
+#canvas {
     background-color: transparent;
-   z-index: -1;
+    z-index: -1;
 }
 
 #pinkboard {
@@ -89,10 +89,10 @@ canvas {
 
 
 /*Basic structure of slider*/
-.container{
+.container {
     width: 500px;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 25%;
     overflow: hidden;
@@ -102,39 +102,47 @@ canvas {
 }
 
 /*Area of images*/
-.wrapper{
+.wrapper {
     width: 100%;
     display: flex;
     animation: slide 5s infinite;
 }
 
-img{
+img {
     width: 100%;
 }
+
 /*Animation activated by keyframes*/
-@keyframes slide{
-    0%{
+@keyframes slide {
+    0% {
         transform: translateX(0);
     }
-    25%{
+
+    25% {
         transform: translateX(0);
     }
-    30%{
+
+    30% {
         transform: translateX(-100%);
     }
-    50%{
+
+    50% {
         transform: translateX(-100%);
     }
-    55%{
+
+    55% {
         transform: translateX(-200%);
     }
-    75%{
+
+    75% {
         transform: translateX(-200%);
     }
-    80%{
+
+    80% {
         transform: translateX(-300%);
     }
-    100%{
+
+    100% {
         transform: translateX(-300%);
     }
 }
