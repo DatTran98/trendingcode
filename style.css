@@ -101,11 +101,12 @@ canvas {
     box-shadow: -1px 5px 15px black;
 }
 
+
 /*Area of images*/
 .wrapper {
     width: 100%;
     display: flex;
-    animation: slide 5s infinite;
+    animation: slide 6s infinite alternate;
 }
 
 img {
@@ -115,11 +116,11 @@ img {
 /*Animation activated by keyframes*/
 @keyframes slide {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 
     25% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 
     30% {
@@ -145,4 +146,119 @@ img {
     100% {
         transform: translateX(-300%);
     }
+}
+
+
+#itemClick {
+    background-color: transparent;
+    width: 100%;
+    color: #FF5CA4;
+    height: 100%;
+    font-size: 31px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#keepGoing {
+    color: #a8f8fc;
+    font-size: 30px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 25%;
+    overflow: hidden;
+}
+
+.ball {
+    /* border-radius: 25px; */
+    width: 100px;
+    height: 90px;
+    /* background: #c00; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s;
+}
+
+
+#foo::before,
+#foo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #FF5CA4;
+}
+
+#foo::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#foo::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#center-heart {
+    /* border-radius: 25px; */
+    width: 100px;
+    height: 90px;
+    /* background: #c00; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: transform 1s;
+}
+/* #center-heart {
+    background-color: transparent;
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    color: #FFF;
+    cursor: pointer;
+    top:0;
+    left: 0;
+} */
+
+#center-heart::before,
+#center-heart::after {
+    text-align: center;
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #FFF;
+    
+}
+
+#center-heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#center-heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
