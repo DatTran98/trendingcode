@@ -19,6 +19,7 @@ body {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 canvas {
@@ -99,6 +100,7 @@ canvas {
     border: 10px solid #ffffff;
     border-radius: 8px;
     box-shadow: -1px 5px 15px black;
+    transition: transform 1s
 }
 
 
@@ -184,7 +186,7 @@ img {
 }
 
 .ball {
-    /* border-radius: 25px; */
+    border-radius: 25px;
     width: 100px;
     height: 90px;
     /* background: #c00; */
@@ -194,71 +196,46 @@ img {
     transition: transform 1s;
 }
 
+
+.ball::before,
+.ball::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+}
+
+.ball::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.ball::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
 
 #foo::before,
 #foo::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 52px;
-    height: 80px;
-    border-radius: 50px 50px 0 0;
     background: #FF5CA4;
 }
 
-#foo::before {
-    left: 50px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
 
-#foo::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-}
+.center-heart {
 
-#center-heart {
-    /* border-radius: 25px; */
-    width: 100px;
-    height: 90px;
-    /* background: #c00; */
-    position: absolute;
     top: 50%;
-    left: 0;
-    transition: transform 1s;
-}
-/* #center-heart {
-    background-color: transparent;
-    position: absolute;
-    width: 100px;
-    height: 90px;
-    color: #FFF;
-    cursor: pointer;
-    top:0;
-    left: 0;
-} */
-
-#center-heart::before,
-#center-heart::after {
+    left: 50%;
+    display: none;
     text-align: center;
-    content: "";
-    position: absolute;
-    width: 52px;
-    height: 80px;
-    border-radius: 50px 50px 0 0;
+    box-shadow: rgb(245, 202, 234) 0 0 50px;
+}
+
+.center-heart::before,
+.center-heart::after {
     background: #FFF;
-    
-}
-
-#center-heart::before {
-    left: 50px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
-
-#center-heart::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
+    box-shadow: #FFF 0 0 50px;
 }
